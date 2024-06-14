@@ -8,15 +8,12 @@ const ContentOption = ({text, image, title}) => {
         border: '2px solid black',
         height: '400px'
       }} >
-      <CardMedia
-        sx={{ height: 140 }}
-        image={image}
-        title="Tytuł tytuł"
-      />
+      
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
+        {image}
         <Typography variant="body2" color="text.secondary">
           {text}
         </Typography>

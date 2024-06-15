@@ -1,21 +1,27 @@
-import { Grid } from '@mui/material'
-import React from 'react'
-import Contact from './Contact'
+import { Grid, Box, Typography } from '@mui/material';
+import React from 'react';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
 const NavItems = () => {
   return (
-    <Grid container>
-      <Grid item xs={6}>
-        <Contact />
-        </Grid>      
-      <Grid item xs={6}>
-          <Grid container>
-            <Grid item xs={12}>cośtam cośtam</Grid>
-            <Grid item xs={12}>cośtam cośtam</Grid>
+    <Box sx={{ bgcolor: '#031B31', padding: '14px' }}>
+      <Grid container sx={{ color: '#FDD13C' }} justifyContent="flex-end">
+        <Grid item>
+          <Grid container direction="column" alignItems="flex-start">
+            <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
+              <PhoneIcon sx={{ color: '#FDD13C', marginRight: '8px' }} />
+              <Typography sx={{ color: '#FDD13C' }}>+48 505 725 281</Typography>
+            </Grid>
+            <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
+              <EmailIcon sx={{ color: '#FDD13C', marginRight: '8px' }} />
+              <Typography sx={{ color: '#FDD13C' }}>biuro@comfortconnector.pl</Typography>
+            </Grid>
           </Grid>
-        </Grid>      
-    </Grid>
-  )
-}
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
 
-export default NavItems
+export default NavItems;

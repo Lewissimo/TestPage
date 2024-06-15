@@ -1,26 +1,44 @@
-import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
-import React from 'react'
-const ContentOption = ({text, image, title}) => {
-  return (
-    <Box display={'flex'} alignItems={'center'} justifyContent={'center'} paddingBottom={'15px'} width={'400px'}>
-      <Card  sx={{
-        width:'300px',
-        border: '2px solid black',
-        height: '400px'
-      }} >
-      
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
-        </Typography>
-        {image}
-        <Typography variant="body2" color="text.secondary">
-          {text}
-        </Typography>
-      </CardContent>
-    </Card>
-    </Box>
-  )
-}
+import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import React from 'react';
 
-export default ContentOption
+const ContentOption = ({ text, image: ImageComponent, title }) => {
+  return (
+    <Box display={'flex'} alignItems={'center'} justifyContent={'center'} paddingBottom={'10px'} width={'350px'}>  
+      <Card sx={{
+        width: '300px',
+        border: '2px solid #FDD13C',
+        height: '350px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        bgcolor: '#031B31',
+        color: '#FDD13C',
+        margin: '10px',
+      }}>
+        {React.isValidElement(ImageComponent) ? (
+          <Box sx={{ fontSize: 40, color: '#FDD13C', marginTop: '20px' }}>
+            {ImageComponent}
+          </Box>
+        ) : (
+          <CardMedia
+            component="img"
+            image={ImageComponent}
+            alt={title}
+            sx={{ width: '100px', margin: '20px auto' }}
+          />
+        )}
+        <CardContent sx={{ textAlign: 'center', color: '#FDD13C' }}>
+          <Typography gutterBottom variant="h5" component="div" sx={{ color: '#FDD13C' }}>
+            {title}
+          </Typography>
+          <Typography variant="body2" sx={{ color: '#FDD13C' }}>
+            {text}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Box>
+  );
+};
+
+export default ContentOption;

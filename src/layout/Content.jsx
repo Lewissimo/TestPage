@@ -16,42 +16,42 @@ const serviceData = [
     description: 'Projektowanie i montaż instalacji elektrycznych w nowych budynkach mieszkalnych i komercyjnych.\nModernizację i rozbudowę istniejących instalacji.\nInstalację i konfigurację systemów oświetleniowych, zarówno wewnętrznych, jak i zewnętrznych.\nMontaż systemów zasilania awaryjnego, w tym generatorów i UPS.\nInstalację systemów zabezpieczeń, takich jak alarmy, monitoring i systemy kontroli dostępu',
     image: '', // Ikona na karcie
     modalImage: '/mnt/data/image.png', // Obraz w modalu
-    icon: <ElectricalServicesIcon sx={{ fontSize: 60 }} />,
+    icon: <ElectricalServicesIcon sx={{ fontSize: 160 }} />,
   },
   {
     title: 'INSTALACJE SMART-HOME',
     description: 'Zdalne sterowanie oświetleniem, ogrzewaniem, klimatyzacją i innymi urządzeniami.\nIntegracja z systemami alarmowymi i monitoringu dla zwiększenia bezpieczeństwa.\nAutomatyzacja rutynowych czynności, takich jak otwieranie/zamykanie rolet czy podlewanie ogrodu.\nWykorzystanie polskiego producenta AMPIO, co gwarantuje wysoką jakość i niezawodność systemów.\nPersonalizowane rozwiązania dostosowane do potrzeb klienta.',
     image: '', // Ikona na karcie
     modalImage: '/mnt/data/image.png', // Obraz w modalu
-    icon: <HomeIcon sx={{ fontSize: 60 }} />,
+    icon: <HomeIcon sx={{ fontSize: 160 }} />,
   },
   {
     title: 'POMIARY ELEKTRYCZNE (UBEZPIECZENIA)',
     description: 'Przeglądy i pomiary instalacji elektrycznych w budynkach mieszkalnych, komercyjnych i przemysłowych.\nWystawianie raportów i certyfikatów niezbędnych do ubezpieczenia nieruchomości.\nPomiary rezystancji izolacji, pętli zwarcia, wyłączników różnicowoprądowych i inne.\nDoradztwo w zakresie poprawy bezpieczeństwa instalacji elektrycznych.',
     image: '', // Ikona na karcie
     modalImage: '', // Brak obrazu, użycie ikony w modalu
-    icon: <SpeedIcon sx={{ fontSize: 60 }} />,
+    icon: <SpeedIcon sx={{ fontSize: 160 }} />,
   },
   {
     title: 'WYSTAWIANIE CERTYFIKATÓW ENERGETYCZNYCH',
     description: 'Ocena efektywności energetycznej budynków.\nWystawianie świadectw charakterystyki energetycznej, które są wymagane przy sprzedaży i wynajmie nieruchomości.\nDoradztwo w zakresie poprawy efektywności energetycznej budynków.\nAnaliza i rekomendacje dotyczące modernizacji instalacji i systemów grzewczych.',
     image: '', // Ikona na karcie
     modalImage: '', // Brak obrazu, użycie ikony w modalu
-    icon: <VerifiedIcon sx={{ fontSize: 60 }} />,
+    icon: <VerifiedIcon sx={{ fontSize: 160 }} />,
   },
   {
     title: 'INSTALACJE BASENOWE',
     description: 'Projektowanie i montaż systemów oświetlenia basenowego.\nInstalacja systemów filtracji i ogrzewania wody.\nMontaż i konfiguracja systemów zabezpieczeń basenowych, takich jak alarmy i monitoring.\nIntegracja z systemami Smart-Home dla zdalnego sterowania i monitorowania.',
     image: '', // Ikona na karcie
     modalImage: '/mnt/data/image.png', // Obraz w modalu
-    icon: <PoolIcon sx={{ fontSize: 60 }} />,
+    icon: <PoolIcon sx={{ fontSize: 160 }} />,
   },
   {
     title: 'REGENERACJA FUNDAMENTÓW',
     description: 'Diagnostyka i ocena stanu technicznego fundamentów.\nWykonanie prac naprawczych, takich jak iniekcje uszczelniające i wzmacnianie strukturalne.\nZabezpieczenia przed wilgocią i wodą gruntową.\nMonitorowanie i kontrola stanu fundamentów po zakończeniu prac.',
     image: '', // Ikona na karcie
     modalImage: '/mnt/data/image.png', // Obraz w modalu
-    icon: <FoundationIcon sx={{ fontSize: 60 }} />,
+    icon: <FoundationIcon sx={{ fontSize: 160 }} />,
   },
 ];
 

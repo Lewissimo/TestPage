@@ -39,10 +39,10 @@ const ExactOffer = ({ open, handleClose, service }) => {
           {service.image ? (
             <img src={service.image} alt={service.title} style={{ width: "80%", maxHeight: '300px', objectFit: 'cover' }} />
           ) : (
-            service.icon && React.cloneElement(service.icon, { sx: { fontSize: 100, color: "#FDD13C" } })
+            service.icon && React.cloneElement(service.icon, { sx: { fontSize: 200, color: "#FDD13C", border:'8px solid #FDD13C' } })
           )}
         </Box>
-        <Box sx={{ width: { xs: "100%", sm: "67%" }, paddingLeft: { xs: 0, sm: 2 } }}>
+        <Box sx={{ width: { xs: "100%", sm: "67%" }, paddingLeft: { xs: 0, sm: 2 }, }}>
           <Typography id="service-modal-title" variant="h4" component="div" gutterBottom>
             {service.title}
           </Typography>
@@ -52,7 +52,7 @@ const ExactOffer = ({ open, handleClose, service }) => {
                 <ListItemIcon>
                   <FiberManualRecordIcon sx={{ color: "#FDD13C", fontSize: 12 }} /> {/* Ikona kropki */}
                 </ListItemIcon>
-                <ListItemText primary={item} />
+                <ListItemText primary={item} primaryTypographyProps={{ fontSize: '1.50rem' }} />
               </ListItem>
             ))}
           </List>

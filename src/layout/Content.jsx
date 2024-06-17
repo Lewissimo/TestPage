@@ -2,7 +2,6 @@ import { Box, Grid } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import ContentOption from '../components/ContentOption';
 import ExactOffer from '../components/ExactOffer';
-import { ContentContext } from '../context/ContentContext';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 import HomeIcon from '@mui/icons-material/Home'; 
 import SpeedIcon from '@mui/icons-material/Speed';
@@ -56,7 +55,6 @@ const serviceData = [
 ];
 
 const Content = () => {
-  const contentContext = useContext(ContentContext);
   const [open, setOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
 
@@ -73,7 +71,7 @@ const Content = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: "#031B31", paddingTop: '10px' }}>
+    <Box sx={{  paddingTop: '10px' }}>
       <Grid container justifyContent={'center'} spacing={2}>
         {serviceData.map((service, index) => (
           <Grid key={index} display={'flex'} justifyContent={'center'} onClick={() => handleOpen(service)} item xs={12} sm={6} lg={4}>

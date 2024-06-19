@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@keyframes closeAnim{
+  from {
+    transform: scale('1');
+  }
+  to {
+    transform: scale('5');
+  }
+}
+
+@keyframes show{
+  from {
+    opacity: 0
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+

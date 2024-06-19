@@ -1,7 +1,7 @@
 import { Box, Typography, Modal, List, ListItem, ListItemText, ListItemIcon } from "@mui/material";
 import React from "react";
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-
+import CloseIcon from '@mui/icons-material/Close';
 const ExactOffer = ({ open, handleClose, service }) => {
   return (
     <Modal
@@ -27,14 +27,22 @@ const ExactOffer = ({ open, handleClose, service }) => {
           display: "flex",
           flexDirection: "row",
           outline: "none",
-          overflowY: "auto", // Dodaj przewijanie pionowe, jeśli treść przekracza wysokość
-          "@media (max-width: 600px)": { // Stylizacja dla małych ekranów
+          overflowY: "auto",
+          "@media (max-width: 600px)": {
             flexDirection: "column",
             width: "95%",
             height: "auto",
           }
         }}
       >
+        <Box onClick={()=>{
+        
+          
+          
+          handleClose();
+        }} sx={{position: 'absolute', top: '0', right: '0', cursor:'pointer', userSelect: 'none'}}>
+          <CloseIcon/>
+        </Box>
         <Box sx={{ width: { xs: "100%", sm: "33%" }, paddingRight: { xs: 0, sm: 2 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           {service.image ? (
             <img src={service.image} alt={service.title} style={{ width: "80%", maxHeight: '300px', objectFit: 'cover' }} />

@@ -55,6 +55,7 @@ const serviceData = [
 ];
 
 const Content = () => {
+  const [isMessage, setIsMessage] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
 

@@ -21,7 +21,6 @@ const Nav = () => {
           item
           xs={4}
           sx={{
-            display: 'flex',
             justifyContent: 'center',
             position: 'relative',
             display: {

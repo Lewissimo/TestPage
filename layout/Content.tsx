@@ -83,11 +83,7 @@ const Content: React.FC = () => {
     <Box sx={{ paddingTop: '10px' }}>
       <Grid container justifyContent={'center'} spacing={2}>
         {serviceData.map((service, index) => (
-          <Grid key={index} display={'flex'} justifyContent={'center'} sx={{
-            '&:MuiPaper-root': {
-              cursor: 'pointer'
-            }
-          }} onClick={() => handleOpen(service)} item xs={12} sm={6} lg={4}>
+          <Grid key={index} display={'flex'} justifyContent={'center'}  onClick={() => handleOpen(service)} item xs={12} sm={6} lg={4}>
             <ContentOption text='KLIKNIJ ABY DOWIEDZIEĆ SIĘ WIĘCEJ' image={service.icon} title={service.title} />
           </Grid>
         ))}

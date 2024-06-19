@@ -1,7 +1,13 @@
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-const ContentOption = ({ text, image: ImageComponent, title }) => {
+interface ContentOptionProps {
+  text: string;
+  image: ReactNode;
+  title: string;
+}
+
+const ContentOption: React.FC<ContentOptionProps> = ({ text, image: ImageComponent, title }) => {
   return (
     <Box display={'flex'} alignItems={'center'} justifyContent={'center'} paddingBottom={'10px'} width={'350px'}>  
       <Card sx={{
@@ -15,6 +21,10 @@ const ContentOption = ({ text, image: ImageComponent, title }) => {
         bgcolor: '#031B31',
         color: '#FDD13C',
         margin: '10px',
+        '&:hover':{
+          borderColor: 'white',
+          cursor: 'pointer'
+        }
       }}>
         {React.isValidElement(ImageComponent) ? (
           <Box sx={{ fontSize: 40, color: '#FDD13C', marginTop: '20px' }}>
@@ -23,7 +33,7 @@ const ContentOption = ({ text, image: ImageComponent, title }) => {
         ) : (
           <CardMedia
             component="img"
-            image={ImageComponent}
+            image={ImageComponent as string}
             alt={title}
             sx={{ width: '100px', margin: '20px auto' }}
           />

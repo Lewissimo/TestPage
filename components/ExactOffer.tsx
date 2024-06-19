@@ -2,7 +2,21 @@ import { Box, Typography, Modal, List, ListItem, ListItemText, ListItemIcon } fr
 import React from "react";
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import CloseIcon from '@mui/icons-material/Close';
-const ExactOffer = ({ open, handleClose, service }) => {
+
+interface Service {
+  title: string;
+  description: string;
+  image?: string;
+  icon?: React.ReactElement;
+}
+
+interface ExactOfferProps {
+  open: boolean;
+  handleClose: () => void;
+  service: Service;
+}
+
+const ExactOffer: React.FC<ExactOfferProps> = ({ open, handleClose, service }) => {
   return (
     <Modal
       open={open}
@@ -35,13 +49,11 @@ const ExactOffer = ({ open, handleClose, service }) => {
           }
         }}
       >
-        <Box onClick={()=>{
-        
-          
-          
-          handleClose();
-        }} sx={{position: 'absolute', top: '0', right: '0', cursor:'pointer', userSelect: 'none'}}>
-          <CloseIcon/>
+        <Box 
+          onClick={handleClose} 
+          sx={{position: 'absolute', top: '0', right: '0', cursor:'pointer', userSelect: 'none'}}
+        >
+          <CloseIcon />
         </Box>
         <Box sx={{ width: { xs: "100%", sm: "33%" }, paddingRight: { xs: 0, sm: 2 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           {service.image ? (
@@ -50,7 +62,7 @@ const ExactOffer = ({ open, handleClose, service }) => {
             service.icon && React.cloneElement(service.icon, { sx: { fontSize: 200, color: "#FDD13C", border:'8px solid #FDD13C' } })
           )}
         </Box>
-        <Box sx={{ width: { xs: "100%", sm: "67%" }, paddingLeft: { xs: 0, sm: 2 }, }}>
+        <Box sx={{ width: { xs: "100%", sm: "67%" }, paddingLeft: { xs: 0, sm: 2 } }}>
           <Typography id="service-modal-title" variant="h4" component="div" gutterBottom>
             {service.title}
           </Typography>
